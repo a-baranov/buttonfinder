@@ -1,0 +1,28 @@
+group 'org.ab.aequiz'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.11.2'
+
+    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+}
+
+ext.mainClassName = "com.ab.buttonfinder.FindOKButtonApplication"
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

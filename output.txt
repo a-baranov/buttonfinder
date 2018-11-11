@@ -1,0 +1,36 @@
+sample-0-origin.html vs. sample-0-origin.html:
+
+Similarity = 1.0, element: <a id="make-everything-ok-button" class="btn btn-success" href="#ok" title="Make-Button" rel="next" onclick="javascript:window.okDone(); return false;"> Make everything OK </a>
+Similarity = 0.03333333333333333, element: <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+Result: #make-everything-ok-button
+
+
+sample-0-origin.html vs. sample-1-evil-gemini.html:
+
+Similarity = 0.25, element: <a class="btn btn-danger" href="#ok" title="Make-Button" onclick="javascript:window.close(); return false;"> Break everyone's OK </a>
+Similarity = 0.8999999999999999, element: <a class="btn btn-success" href="#check-and-ok" title="Make-Button" rel="done" onclick="javascript:window.okDone(); return false;"> Make everything OK </a>
+Similarity = 0.03333333333333333, element: <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+Result: #page-wrapper > div.row:nth-child(3) > div.col-lg-8 > div.panel.panel-default > div.panel-body > a.btn.btn-success
+
+
+sample-0-origin.html vs. sample-2-container-and-clone.html:
+
+Similarity = 0.9249999999999999, element: <a class="btn test-link-ok" href="#ok" title="Make-Button" rel="next" onclick="javascript:window.okComplete(); return false;"> Make everything OK </a>
+Similarity = 0.03333333333333333, element: <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+Similarity = 0.15000000000000002, element: <a href="#incorrect-link" class="btn btn-info" style="display:none" title="Make-Button" onclick="javascript:window.close(); return false;"> Make everything OK </a>
+Result: #page-wrapper > div.row:nth-child(3) > div.col-lg-8 > div.panel.panel-default > div.panel-body > div.some-container > a.btn.test-link-ok
+
+
+sample-0-origin.html vs. sample-3-the-escape.html:
+
+Similarity = 0.15000000000000002, element: <a href="#ok" class="btn btn-warning" rel="next" onclick="javascript:window.close(); return false;"> Make something somehow </a>
+Similarity = 0.8999999999999999, element: <a class="btn btn-success" href="#ok" title="Do-Link" rel="next" onclick="javascript:window.okDone(); return false;"> Do anything perfect </a>
+Similarity = 0.03333333333333333, element: <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+Result: #page-wrapper > div.row:nth-child(3) > div.col-lg-8 > div.panel.panel-default > div.panel-footer > a.btn.btn-success
+
+
+sample-0-origin.html vs. sample-4-the-mash.html:
+
+Similarity = 1.0, element: <a class="btn btn-success" href="#ok" title="Make-Button" rel="next" onclick="javascript:window.okFinalize(); return false;"> Do all GREAT </a>
+Similarity = 0.03333333333333333, element: <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+Result: #page-wrapper > div.row:nth-child(3) > div.col-lg-8 > div.panel.panel-default > div.panel-footer > a.btn.btn-success
